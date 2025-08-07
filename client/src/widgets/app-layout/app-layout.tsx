@@ -1,44 +1,15 @@
-import { Outlet } from 'react-router-dom';
-import { Layout, Menu, type MenuProps } from 'antd';
-import styles from './app-layout.module.css';
-
-const { Header, Sider, Content } = Layout;
-
+import SliderAdv from "@/shared/SliderAdv";
 const AppLayout = () => {
-  const items: MenuProps['items'] = [
-    {
-      key: '1',
-      label: <a href="/">пункт 1</a>,
-    },
-    {
-      key: '2',
-      label: <a href="/user/create">пункт 2</a>,
-    },
-    {
-      key: '3',
-      label: <a href="/login">Выйти</a>,
-    },
+  const images = [
+    { id: 1, url: "ach1.png", title: "1" },
+    { id: 2, url: "ach2.png", title: "2" },
+    { id: 3, url: "ach3.png", title: "3" },
   ];
+
   return (
-    <Layout className={styles.layout}>
-      <Header className={styles.header}>
-        <h1>Header</h1>
-      </Header>
-
-      <Layout>
-        <Sider className={styles.sider} width={200}>
-          <Menu
-            mode="inline"
-            items={items}
-            className={styles.menu}
-          />
-        </Sider>
-
-        <Content className={styles.content}>
-          <Outlet /> 
-        </Content>
-      </Layout>
-    </Layout>
+    <div style={{ width: 660, height: 279 }}>
+      <SliderAdv items={images} />
+    </div>
   );
 };
 

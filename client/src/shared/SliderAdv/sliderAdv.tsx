@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import styles from "./sliderAdv.module.css";
+import type { ISliderAdvProps, ISliderItem } from "../types";
 
-interface IItem {
-  url: string;
-  title: string;
-}
-
-interface ISliderItem {
-  item: IItem;
-  isActive: boolean;
-}
 
 const SliderItem: React.FC<ISliderItem> = ({ item, isActive }) => {
   return (
@@ -20,9 +12,7 @@ const SliderItem: React.FC<ISliderItem> = ({ item, isActive }) => {
   );
 };
 
-interface ISliderAdvProps {
-  items: IItem[];
-}
+
 
 const SliderAdv: React.FC<ISliderAdvProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

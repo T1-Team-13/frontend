@@ -1,44 +1,51 @@
-import { Outlet } from 'react-router-dom';
-import { Layout, Menu, type MenuProps } from 'antd';
-import styles from './app-layout.module.css';
-
-const { Header, Sider, Content } = Layout;
+import Colleagues from "@/shared/components/Colleagues";
+import Header from "@/shared/components/HeaderLayout";
+import Menu from "@/shared/components/Menu";
+import ProfileCard from "@/shared/components/ProfileCard";
+import Section from "@/shared/components/Section";
+import { Flex } from "antd";
 
 const AppLayout = () => {
-  const items: MenuProps['items'] = [
-    {
-      key: '1',
-      label: <a href="/">пункт 1</a>,
-    },
-    {
-      key: '2',
-      label: <a href="/user/create">пункт 2</a>,
-    },
-    {
-      key: '3',
-      label: <a href="/login">Выйти</a>,
-    },
+  const teams = [
+    { id: 1, url: "ach1.png", title: "Cool" },
+    { id: 2, url: "ach2.png", title: "New" },
+    { id: 3, url: "ach3.png", title: "Great" },
   ];
+  const setvices = [
+    { id: 1, url: "ach4.png", title: "Cool" },
+    { id: 2, url: "ach5.png", title: "New" },
+    { id: 3, url: "ach6.png", title: "Great" },
+    { id: 4, url: "ach7.png", title: "Not bad" },
+  ];
+
   return (
-    <Layout className={styles.layout}>
-      <Header className={styles.header}>
-        <h1>Header</h1>
-      </Header>
-
-      <Layout>
-        <Sider className={styles.sider} width={200}>
-          <Menu
-            mode="inline"
-            items={items}
-            className={styles.menu}
-          />
-        </Sider>
-
-        <Content className={styles.content}>
-          <Outlet /> 
-        </Content>
-      </Layout>
-    </Layout>
+    <>
+    <Header url='profile.png'/>
+      <Flex gap={"2.78vw"} style={{ padding: "2.78vw 5.55vw" }}>
+        <ProfileCard
+          fullname="Иванов Марк Андреевич"
+          photo="profile.png"
+          position="Fullstack Developer"
+          department="Отдел разработки инновационных решений"
+        />
+        <div>
+          <Menu />
+          <Flex vertical justify="center">
+            <Section
+              title="Командное взаимодействие"
+              description="Лучшие ачивки здесь!!!"
+              achievements={teams}
+            />
+            <Section
+              title="Клиентский сервис"
+              description="Лучшие ачивки здесь!!!"
+              achievements={setvices}
+            />
+            <Colleagues />
+          </Flex>
+        </div>
+      </Flex>
+    </>
   );
 };
 

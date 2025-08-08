@@ -1,8 +1,8 @@
-import Colleagues from "@/shared/Colleagues";
-import Header from "@/shared/HeaderLayout";
-import Menu from "@/shared/Menu";
-import ProfileCard from "@/shared/ProfileCard";
-import Section from "@/shared/Section";
+import Colleagues from "@/shared/components/Colleagues";
+import Header from "@/shared/components/HeaderLayout";
+import Menu from "@/shared/components/Menu";
+import ProfileCard from "@/shared/components/ProfileCard";
+import Section from "@/shared/components/Section";
 import { Flex } from "antd";
 
 const AppLayout = () => {
@@ -10,6 +10,12 @@ const AppLayout = () => {
     { id: 1, url: "ach1.png", title: "Cool" },
     { id: 2, url: "ach2.png", title: "New" },
     { id: 3, url: "ach3.png", title: "Great" },
+  ];
+  const setvices = [
+    { id: 1, url: "ach4.png", title: "Cool" },
+    { id: 2, url: "ach5.png", title: "New" },
+    { id: 3, url: "ach6.png", title: "Great" },
+    { id: 4, url: "ach7.png", title: "Not bad" },
   ];
 
   return (
@@ -33,7 +39,7 @@ const AppLayout = () => {
             <Section
               title="Клиентский сервис"
               description="Лучшие ачивки здесь!!!"
-              achievements={teams}
+              achievements={setvices}
             />
             <Colleagues />
           </Flex>

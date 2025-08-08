@@ -15,7 +15,7 @@ const AppLayout = () => {
   return (
     <>
     <Header url='profile.png'/>
-      <Flex gap={40} style={{ padding: "2.78vw 5.55vw" }}>
+      <Flex gap={"2.78vw"} style={{ padding: "2.78vw 5.55vw" }}>
         <ProfileCard
           fullname="Иванов Марк Андреевич"
           photo="profile.png"

@@ -19,7 +19,7 @@ export const ButtonMenu: React.FC<{ title: string; path: string }> = ({
 
 const Menu: React.FC = () => {
   return (
-    <Flex gap="25px">
+    <Flex gap={"1.74vw"}>
       <ButtonMenu title="Профиль" path="/profile" />
       <ButtonMenu title="Активность" path="/activity" />
       <ButtonMenu title="Достижения" path="/achievements" />

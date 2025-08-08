@@ -1,4 +1,5 @@
 import Colleagues from "@/shared/Colleagues";
+import Header from "@/shared/HeaderLayout";
 import Menu from "@/shared/Menu";
 import ProfileCard from "@/shared/ProfileCard";
 import Section from "@/shared/Section";
@@ -12,24 +13,33 @@ const AppLayout = () => {
   ];
 
   return (
-  <Flex gap={40} style={{padding: '2.78vw 5.55vw'}}>
-    <ProfileCard fullname="Иванов Марк Андреевич" photo='profile.png' position="Fullstack Developer" department="Отдел разработки инновационных решений"/>
-    <div>
-      <Menu/>
-      <Flex vertical justify="center">
-        <Section
-          title="Командное взаимодействие"
-          description="Лучшие ачивки здесь!!!"
-          achievements={teams}
+    <>
+    <Header url='profile.png'/>
+      <Flex gap={40} style={{ padding: "2.78vw 5.55vw" }}>
+        <ProfileCard
+          fullname="Иванов Марк Андреевич"
+          photo="profile.png"
+          position="Fullstack Developer"
+          department="Отдел разработки инновационных решений"
         />
-        <Section
-          title="Клиентский сервис"
-          description="Лучшие ачивки здесь!!!"
-          achievements={teams}
-        />
-        <Colleagues />
+        <div>
+          <Menu />
+          <Flex vertical justify="center">
+            <Section
+              title="Командное взаимодействие"
+              description="Лучшие ачивки здесь!!!"
+              achievements={teams}
+            />
+            <Section
+              title="Клиентский сервис"
+              description="Лучшие ачивки здесь!!!"
+              achievements={teams}
+            />
+            <Colleagues />
+          </Flex>
+        </div>
       </Flex>
-    </div></Flex>
+    </>
   );
 };
 

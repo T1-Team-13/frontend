@@ -1,11 +1,6 @@
 import styles from "./profileCard.module.css";
+import type {IProfileProps} from '../types'
 
-interface IProfileProps {
-  fullname: string;
-  photo: string;
-  position: string;
-  department: string;
-}
 const ProfileCard: React.FC<IProfileProps> = ({
   fullname,
   photo,

@@ -1,5 +1,6 @@
 import Colleagues from "@/shared/Colleagues";
 import Menu from "@/shared/Menu";
+import ProfileCard from "@/shared/ProfileCard";
 import Section from "@/shared/Section";
 import { Flex } from "antd";
 
@@ -11,6 +12,8 @@ const AppLayout = () => {
   ];
 
   return (
+  <Flex gap={40} style={{padding: '2.78vw 5.55vw'}}>
+    <ProfileCard fullname="Иванов Марк Андреевич" photo='profile.png' position="Fullstack Developer" department="Отдел разработки инновационных решений"/>
     <div>
       <Menu/>
       <Flex vertical justify="center">
@@ -26,7 +29,7 @@ const AppLayout = () => {
         />
         <Colleagues />
       </Flex>
-    </div>
+    </div></Flex>
   );
 };
 

@@ -21,15 +21,16 @@
   border-radius: 50%;
   box-shadow: 0 0 5px silver;
 }
-.profileContent{
-    display: flex;
-    flex-direction: column;
+.profileContent {
+  display: flex;
+  flex-direction: column;
 }
-.profileName{
+.profileName {
   font-size: 2.57vw;
+  font-weight: 600;
 }
-.profileDepart{
-    color:#00AAE6;
+.profileDepart {
+  color: #00aae6;
   font-weight: 300;
 }
 .profileFidback {
@@ -45,12 +46,12 @@
   border-radius: 5px;
   transition: all 0.2s;
 }
-.profileFidback:hover{
-    border: 3px solid #8593a4;
-    opacity: 0.7;
-    cursor: pointer;
+.profileFidback:hover {
+  border: 3px solid #8593a4;
+  opacity: 0.7;
+  cursor: pointer;
 }
-.profileFidback img{
+.profileFidback img {
   width: 2.22vw;
   height: 1.86vw;
 }

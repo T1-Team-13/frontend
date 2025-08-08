@@ -1,3 +1,4 @@
+import Achievements from "@/shared/components/Achievements";
 import Colleagues from "@/shared/components/Colleagues";
 import Header from "@/shared/components/HeaderLayout";
 import Menu from "@/shared/components/Menu";
@@ -22,12 +23,14 @@ const AppLayout = () => {
     <>
     <Header url='profile.png'/>
       <Flex gap={"2.78vw"} style={{ padding: "2.78vw 5.55vw" }}>
+         <Flex vertical>
         <ProfileCard
           fullname="Иванов Марк Андреевич"
           photo="profile.png"
           position="Fullstack Developer"
           department="Отдел разработки инновационных решений"
         />
+        <Achievements items={setvices}></Achievements></Flex>
         <div>
           <Menu />
           <Flex vertical justify="center">

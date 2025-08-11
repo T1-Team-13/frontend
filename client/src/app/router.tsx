@@ -3,6 +3,7 @@ import MainPage from "@pages/main-page";
 import Error404Page from "@pages/error404-page/";
 import LoginPage from "@/pages/login-page";
 import AppLayout from "@/widgets/app-layout";
+import TestPage from "@/pages/test-page";
 
 const Router = () => {
   return (
@@ -18,6 +19,7 @@ const Router = () => {
           <Route path="/user:id/achivements" element={<MainPage />} />
           <Route path="/user:id/colleagues" element={<MainPage />} />
         </Route>
+        <Route path="/test" element={<TestPage />} />
         <Route path="/" element={<LoginPage />} /> {/* Сначала пользователь попадает на страницу логина, 
         выполняется проверка, если пользователь уже авторизован, то автоматически направляем его на "/user:id/achivements"*/}
         <Route path="*" element={<Error404Page />} />

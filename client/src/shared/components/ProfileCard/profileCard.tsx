@@ -17,7 +17,7 @@ const ProfileCard: React.FC<IProfileProps> = ({
 
         <div className={styles.profileFidback}>
           <img src="team.png" alt="icon"></img>
-          <p style={{ margin: 0 }}>Обраная связь</p>
+          <p style={{ margin: 0 }}>Обратная связь</p>
         </div>
       </div>
     </section>

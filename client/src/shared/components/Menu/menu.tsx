@@ -20,7 +20,7 @@ export const ButtonMenu: React.FC<{ title: string; path: string }> = ({
 const Menu: React.FC = () => {
   return (
     <div className={styles.menuContainer}>
-      <ButtonMenu title="Профиль" path="/profile" />
+      <ButtonMenu title="Профиль" path="/" />
       <ButtonMenu title="Активность" path="/activity" />
       <ButtonMenu title="Достижения" path="/achievements" />
     </div>

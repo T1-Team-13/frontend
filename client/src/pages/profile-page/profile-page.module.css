@@ -1,0 +1,12 @@
+.pfpageContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 2.78vw;
+  padding: 4.78vw 5.55vw;
+  justify-content: center;
+}
+@media(max-width:500px){
+  .pfpageContainer{
+    flex-direction: column;
+  }
+}

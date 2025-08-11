@@ -15,3 +15,8 @@ export interface IProfileProps {
   position: string;
   department: string;
 }
+export interface IFlipCardProps {
+  url: string;
+  title: string;
+  description: string;
+}

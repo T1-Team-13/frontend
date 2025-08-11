@@ -21,15 +21,16 @@
   border-radius: 50%;
   box-shadow: 0 0 5px silver;
 }
-.profileContent{
-    display: flex;
-    flex-direction: column;
+.profileContent {
+  display: flex;
+  flex-direction: column;
 }
-.profileName{
+.profileName {
   font-size: 2.57vw;
+  font-weight: 600;
 }
-.profileDepart{
-    color:#00AAE6;
+.profileDepart {
+  color: #00aae6;
   font-weight: 300;
 }
 .profileFidback {
@@ -45,12 +46,49 @@
   border-radius: 5px;
   transition: all 0.2s;
 }
-.profileFidback:hover{
-    border: 3px solid #8593a4;
-    opacity: 0.7;
-    cursor: pointer;
+.profileFidback:hover {
+  border: 3px solid #8593a4;
+  opacity: 0.7;
+  cursor: pointer;
 }
-.profileFidback img{
+.profileFidback img {
   width: 2.22vw;
   height: 1.86vw;
+}
+@media (max-width: 500px) {
+  .profileContainer {
+    width: 90vw;
+    height: 40vw;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.22vw;
+    font-size: 3.1vw;
+  }
+  .photoContainer {
+    width: 26vw;
+    height: 26vw;
+  }
+  .profileContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profileName {
+    font-size: 4.4vw;
+    margin-bottom: 3vw;
+  }
+  .profileFidback {
+    width: 85%;
+    height: 7vw;
+    border: 1px solid #b6c0cd;
+    gap: 1vw;
+    margin-top: 4vw;
+  }
+  .profileFidback img {
+    width: 4vw;
+    height: 3.6vw;
+  }
+  .profileContent p {
+    margin-bottom: 1.11vw;
+  }
 }

@@ -1,6 +1,5 @@
 import styles from "./login-form.module.css";
-import { Form, Input, Button, Space } from "antd";
-import { useNavigate } from "react-router-dom";
+import { Form, Input, Button } from "antd";
 
 const LoginForm = () => {
     const [form] = Form.useForm();
@@ -11,25 +10,21 @@ const LoginForm = () => {
             className={styles.form}
         >
             <Form.Item
-                label="логин"
                 name="email"
                 rules={[{ required: true, message: "Пожалуйста, введите логин", type: "email" }]}
             >
-                <Input />
+                <Input placeholder="Email" />
             </Form.Item>
             <Form.Item
-                label="пароль"
                 name="password"
                 rules={[{ required: true, message: "Пожалуйста, введите пароль" }]}
             >
-                <Input.Password />
+                <Input.Password placeholder="Пароль" />
             </Form.Item>
             <Form.Item name="submit">
-                <Space className={styles.submit}>
-                    <Button type="primary" htmlType="submit">
-                        Войти
-                    </Button>
-                </Space>
+                <Button type="primary" htmlType="submit">
+                    Войти
+                </Button>
             </Form.Item>
         </Form>
     );

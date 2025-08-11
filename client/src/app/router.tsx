@@ -5,21 +5,17 @@ import AppLayout from "@/widgets/app-layout";
 import ProfilePage from "@/pages/profile-page";
 import AchievementsPage from "@/pages/achievements-page";
 import ActivityPage from "@/pages/activity-page";
+import TestPage from "@/pages/test-page";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
 
-        {/* <Route path="/" element={<LoginPage />} /> Сначала пользователь попадает на страницу логина, 
+        <Route path="/" element={<LoginPage />} /> 
+        {/*Сначала пользователь попадает на страницу логина, 
         выполняется проверка, если пользователь уже авторизован, то автоматически направляем его на "/user:id/achivements"*/}
         <Route element={<AppLayout />}>
-<<<<<<< HEAD
-          <Route path="/" element={<MainPage />} />
-        </Route>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="*" element={<Error404Page />} />
-=======
           {/* 
           опираясь на наши планы, 
           в нашем преокте пока вижу вот такие маршруты.
@@ -30,9 +26,8 @@ const Router = () => {
           <Route path="/activity" element={<ActivityPage />} />
           <Route path="/achievements" element={<AchievementsPage />} />
         </Route>
-
+          <Route path="/test" element={<TestPage />} />
           <Route path="*" element={<Error404Page />} />
->>>>>>> 7a8afaf (Добавлен раздел коллеги в виджете Профиль)
       </Routes>
     </BrowserRouter>
   );

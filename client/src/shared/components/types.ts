@@ -2,6 +2,7 @@ export interface ISliderAdvProps {
   items: IItem[];
 }
 export interface IItem {
+  id?:number;
   url: string;
   title: string;
 }
@@ -19,4 +20,9 @@ export interface IFlipCardProps {
   url: string;
   title: string;
   description: string;
+}
+export interface IACHProps{
+ title:string;
+        description: string;
+        items: IItem[]
 }

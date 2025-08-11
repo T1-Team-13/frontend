@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./sliderAdv.module.css";
 import type { ISliderAdvProps, ISliderItem } from "../types";
 
-
 const SliderItem: React.FC<ISliderItem> = ({ item, isActive }) => {
   return (
     <div className={`${styles.itemContainer} ${isActive ? styles.active : ""}`}>
@@ -12,12 +11,14 @@ const SliderItem: React.FC<ISliderItem> = ({ item, isActive }) => {
   );
 };
 
-
-
 const SliderAdv: React.FC<ISliderAdvProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [transitionDirection, setTransitionDirection] = useState<"left" | "right">("right");
-
+  const [transitionDirection, setTransitionDirection] = useState<
+    "left" | "right"
+  >("right");
+  if (items.length === 0) {
+    return <></>;
+  }
   const goToPrev = () => {
     setTransitionDirection("left");
     setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
@@ -46,7 +47,11 @@ const SliderAdv: React.FC<ISliderAdvProps> = ({ items }) => {
                 : position === 0
                 ? styles.prev
                 : styles.next
-            } ${transitionDirection === "left" ? styles.leftTransition : styles.rightTransition}`}
+            } ${
+              transitionDirection === "left"
+                ? styles.leftTransition
+                : styles.rightTransition
+            }`}
             onClick={
               position === 1 ? undefined : position === 0 ? goToPrev : goToNext
             }

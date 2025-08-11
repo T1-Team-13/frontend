@@ -1,14 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainPage from "@pages/main-page";
 import Error404Page from "@pages/error404-page/";
 import LoginPage from "@/pages/login-page";
 import AppLayout from "@/widgets/app-layout";
+import ProfilePage from "@/pages/profile-page";
+import AchievementsPage from "@/pages/achievements-page";
+import ActivityPage from "@/pages/activity-page";
 import TestPage from "@/pages/test-page";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
+
+        <Route path="/" element={<LoginPage />} /> 
+        {/*Сначала пользователь попадает на страницу логина, 
+        выполняется проверка, если пользователь уже авторизован, то автоматически направляем его на "/user:id/achivements"*/}
         <Route element={<AppLayout />}>
           {/* 
           опираясь на наши планы, 
@@ -16,13 +22,12 @@ const Router = () => {
           MainPage предлагаю сделать по аналогии с универсальной формой, 
           как это у нас было в 3 и 4 домашках (пропсами передавать action либо achivements либо colleagues)
           */}
-          <Route path="/user:id/achivements" element={<MainPage />} />
-          <Route path="/user:id/colleagues" element={<MainPage />} />
+          <Route path="/" element={<ProfilePage />} />
+          <Route path="/activity" element={<ActivityPage />} />
+          <Route path="/achievements" element={<AchievementsPage />} />
         </Route>
-        <Route path="/test" element={<TestPage />} />
-        <Route path="/" element={<LoginPage />} /> {/* Сначала пользователь попадает на страницу логина, 
-        выполняется проверка, если пользователь уже авторизован, то автоматически направляем его на "/user:id/achivements"*/}
-        <Route path="*" element={<Error404Page />} />
+          <Route path="/test" element={<TestPage />} />
+          <Route path="*" element={<Error404Page />} />
       </Routes>
     </BrowserRouter>
   );

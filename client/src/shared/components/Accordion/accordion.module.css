@@ -1,0 +1,101 @@
+.accordion {
+  max-width: 50.8vw;
+  margin: auto;
+  background: white;
+  border-radius: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.1vw;
+  margin-top: 2.1vw;
+  margin-bottom: 5vw;
+}
+.accordionItem {
+  border-top: 1px solid #ddd;
+}
+.accordionItem:first-child {
+  border-top: none;
+}
+.accordionHeader {
+  width: 45.8vw;
+  margin: 0;
+  text-align: left;
+  padding: 20px 20px 0px 20px;
+  font-size: 2.57vw;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordionHeader.active {
+  background: #f0f0f0;
+}
+
+.accordionIcon {
+  font-size: 1.2rem;
+}
+.link {
+  font-size: 1.57vw;
+  margin-bottom: 3px;
+  color: #00aae6;
+}
+.link:hover {
+  cursor: pointer;
+}
+.lineLink {
+  width: fit-content;
+  display: inline-table;
+}
+.popupLine {
+  width: 0%;
+  margin-top: 2px;
+  background-color: #00aae6;
+  height: 2px;
+  float: left;
+  transition: all 0.7s;
+}
+.lineLink:hover .popupLine {
+  width: 100%;
+}
+.accordionBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0 0 20px 20px;
+}
+.accordionBody.active {
+  max-height: fit-content;
+}
+@media (max-width: 500px) {
+  .accordion {
+    position: relative;
+    max-width: 90vw;
+    height: 17.5vw;
+    padding: 0 3.4vw;
+  }
+  .accordionHeader {
+    width: 84vw;
+    font-size: 4.4vw;
+  }
+  .link {
+    font-size: 3.1vw;
+  }
+  .accordionBody {
+    position: absolute;
+    left: 0vw;
+    top: 14vw;
+    background-color: #fff;
+  }
+}

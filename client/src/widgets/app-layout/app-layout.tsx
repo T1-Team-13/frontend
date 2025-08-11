@@ -1,10 +1,12 @@
-import ProfilePage from "@/pages/profile-page";
-import FlipCard from "@/shared/components/FlipCard/FlipCard";
 import styles from "./app-layout.module.css";
 import { Flex } from "antd";
-
+import { Outlet } from "react-router-dom";
+import Header from "@/shared/components/HeaderLayout";
+import ProfileCard from "@/shared/components/ProfileCard";
+import Menu from "@/shared/components/Menu";
+import Achievements from "@/shared/components/Achievements";
 const AppLayout = () => {
-  const user = {
+  const profileInfo = {
     fullname: "Иванов Марк Андреевич",
     photo: "profile.png",
     position: "Fullstack Developer",
@@ -34,49 +36,24 @@ const AppLayout = () => {
 
   return (
     <>
-    {/*<Flex align="center" justify="center" wrap gap='30px' style={{width: '50%'}}>
-      <FlipCard
-        url={"ach4.png"}
-        title="Cool"
-        description="Выдается всем новым сотрудникам"
-      />
-       <FlipCard
-        url={"ach1.png"}
-        title="Notbad"
-        description="Выдается всем новым сотрудникам"
-      />
-       <FlipCard
-        url={"ach2.png"}
-        title="Good"
-        description="Выдается всем новым сотрудникам"
-      />
-       <FlipCard
-        url={"ach4.png"}
-        title="Nice"
-        description="Выдается всем новым сотрудникам"
-      />
-       <FlipCard
-        url={"ach3.png"}
-        title="okay"
-        description="Выдается всем новым сотрудникам"
-      />
-       <FlipCard
-        url={"ach7.png"}
-        title="Stop"
-        description="Выдается всем новым сотрудникам"
-      />
-       <FlipCard
-        url={"ach5.png"}
-        title="Finefellow"
-        description="Выдается всем новым сотрудникам"
-      />
-       <FlipCard
-        url={"ach6.png"}
-        title="Super"
-        description="Выдается всем новым сотрудникам"
-      />
-      </Flex>*/}
-      {<ProfilePage profileInfo={user}></ProfilePage>}
+    <Header url={profileInfo.photo} />
+      <div className={styles.pfpageContainer}>
+        <Flex vertical>
+          <ProfileCard
+            fullname={profileInfo.fullname}
+            photo={profileInfo.photo}
+            position={profileInfo.position}
+            department={profileInfo.department}
+          />
+          <Achievements items={profileInfo.achievements[0].items}></Achievements>
+        </Flex>
+        <div>
+          <Menu />
+          <Flex vertical justify="center">
+            <Outlet />
+          </Flex>
+        </div>
+      </div>
     </>
   );
 };

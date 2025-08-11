@@ -19,6 +19,11 @@
   color: #292d31;
   background-color: #abb5c09e;
 }
+.active {
+  color: #292d31;
+  opacity: 1;
+  background-color: #abb5c09e;
+}
 .buttonMenu span {
   width: fit-content;
   color: #292d31;

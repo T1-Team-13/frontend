@@ -1,12 +1,13 @@
 import { Flex } from "antd";
 import styles from "./menu.module.css";
 import { Link } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 export const ButtonMenu: React.FC<{ title: string; path: string }> = ({
   title,
   path,
 }) => {
-  const isActive = window.location.href.includes(path);
+  const location = useLocation();
+  const isActive = location.pathname === path;
   return (
     <Link
       to={path}

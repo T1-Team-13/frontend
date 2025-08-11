@@ -1,5 +1,7 @@
 import ProfilePage from "@/pages/profile-page";
+import FlipCard from "@/shared/components/FlipCard/FlipCard";
 import styles from "./app-layout.module.css";
+import { Flex } from "antd";
 
 const AppLayout = () => {
   const user = {
@@ -32,7 +34,49 @@ const AppLayout = () => {
 
   return (
     <>
-      <ProfilePage profileInfo={user}></ProfilePage>
+    {/*<Flex align="center" justify="center" wrap gap='30px' style={{width: '50%'}}>
+      <FlipCard
+        url={"ach4.png"}
+        title="Cool"
+        description="Выдается всем новым сотрудникам"
+      />
+       <FlipCard
+        url={"ach1.png"}
+        title="Notbad"
+        description="Выдается всем новым сотрудникам"
+      />
+       <FlipCard
+        url={"ach2.png"}
+        title="Good"
+        description="Выдается всем новым сотрудникам"
+      />
+       <FlipCard
+        url={"ach4.png"}
+        title="Nice"
+        description="Выдается всем новым сотрудникам"
+      />
+       <FlipCard
+        url={"ach3.png"}
+        title="okay"
+        description="Выдается всем новым сотрудникам"
+      />
+       <FlipCard
+        url={"ach7.png"}
+        title="Stop"
+        description="Выдается всем новым сотрудникам"
+      />
+       <FlipCard
+        url={"ach5.png"}
+        title="Finefellow"
+        description="Выдается всем новым сотрудникам"
+      />
+       <FlipCard
+        url={"ach6.png"}
+        title="Super"
+        description="Выдается всем новым сотрудникам"
+      />
+      </Flex>*/}
+      {<ProfilePage profileInfo={user}></ProfilePage>}
     </>
   );
 };

@@ -34,7 +34,6 @@ const ProfilePage: React.FC<IProfilePageProps> = ({ profileInfo }) => {
             department={profileInfo.department}
           />
           <Achievements items={achv}></Achievements>
-          <FlipCard></FlipCard>
         </Flex>
         <div>
           <Menu />

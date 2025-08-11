@@ -1,14 +1,18 @@
 import type { ISliderAdvProps } from "../types";
 import styles from "./achievements.module.css";
-import { Flex } from "antd";
+
 const Achievements: React.FC<ISliderAdvProps> = ({ items }) => {
   return (
-    <section className={styles.sectionCantainer}>
+    <section className={styles.sectionContainer}>
+      <div className={styles.sectionHeader}>
       <h3 className={styles.sectionTitle}>
         Достижения &nbsp; <span>{items.length}</span>
       </h3>
-      <Flex align="center" justify="space-between">
-        <div>
+       <button className={styles.button}>
+        <img src="arrow.png" alt="arrow"></img>
+      </button>
+      </div>
+        <div className={styles.sectionContent}>
           {items.slice(0, 3).map((item, index) => {
             return (
               <img
@@ -19,9 +23,8 @@ const Achievements: React.FC<ISliderAdvProps> = ({ items }) => {
               ></img>
             );
           })}
-        </div>
-        <button className={styles.button}><img src='arrow.png' alt='arrow'></img></button>
-      </Flex>
+      </div>
+     
     </section>
   );
 };

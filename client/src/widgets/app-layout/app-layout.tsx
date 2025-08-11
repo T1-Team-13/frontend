@@ -1,11 +1,12 @@
 import Achievements from "@/shared/components/Achievements";
 import Colleagues from "@/shared/components/Colleagues";
+import FlipCard from "@/shared/components/FlipCard/FlipCard";
 import Header from "@/shared/components/HeaderLayout";
 import Menu from "@/shared/components/Menu";
 import ProfileCard from "@/shared/components/ProfileCard";
 import Section from "@/shared/components/Section";
 import { Flex } from "antd";
-
+import styles from './app-layout.module.css'
 const AppLayout = () => {
   const teams = [
     { id: 1, url: "ach1.png", title: "Cool" },
@@ -21,16 +22,18 @@ const AppLayout = () => {
 
   return (
     <>
-    <Header url='profile.png'/>
-      <Flex gap={"2.78vw"} style={{ padding: "2.78vw 5.55vw" }}>
-         <Flex vertical>
-        <ProfileCard
-          fullname="Иванов Марк Андреевич"
-          photo="profile.png"
-          position="Fullstack Developer"
-          department="Отдел разработки инновационных решений"
-        />
-        <Achievements items={setvices}></Achievements></Flex>
+      <Header url="profile.png" />
+      <div className={styles.pageContainer}>
+        <Flex vertical>
+          <ProfileCard
+            fullname="Иванов Марк Андреевич"
+            photo="profile.png"
+            position="Fullstack Developer"
+            department="Отдел разработки инновационных решений"
+          />
+          <Achievements items={setvices}></Achievements>
+          <FlipCard></FlipCard>
+        </Flex>
         <div>
           <Menu />
           <Flex vertical justify="center">
@@ -47,7 +50,7 @@ const AppLayout = () => {
             <Colleagues />
           </Flex>
         </div>
-      </Flex>
+      </div>
     </>
   );
 };

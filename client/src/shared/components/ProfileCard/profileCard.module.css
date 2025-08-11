@@ -55,3 +55,40 @@
   width: 2.22vw;
   height: 1.86vw;
 }
+@media (max-width: 500px) {
+  .profileContainer {
+    width: 90vw;
+    height: 40vw;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.22vw;
+    font-size: 3.1vw;
+  }
+  .photoContainer {
+    width: 26vw;
+    height: 26vw;
+  }
+  .profileContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profileName {
+    font-size: 4.4vw;
+    margin-bottom: 3vw;
+  }
+  .profileFidback {
+    width: 85%;
+    height: 6vw;
+    border: 1px solid #b6c0cd;
+    gap: 1vw;
+    margin-top: 4vw;
+  }
+  .profileFidback img {
+    width: 4vw;
+    height: 3.6vw;
+  }
+  .profileContent p {
+    margin-bottom: 1.11vw;
+  }
+}

@@ -10,8 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 2.1vw;
-  padding-right: 2.1vw;
+  padding: 0 2.1vw;
   margin-top: 2.1vw;
 }
 .colleaguesHeader {
@@ -40,4 +39,17 @@
 }
 .lineLink:hover .popupLine {
   width: 100%;
+}
+@media (max-width: 500px) {
+  .colleaguesContainer {
+    width: 90vw;
+    height: 17.5vw;
+    padding: 0 3.4vw;
+  }
+  .colleaguesHeader {
+    font-size: 4.4vw;
+  }
+  .link {
+    font-size: 3.1vw;
+  }
 }

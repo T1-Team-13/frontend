@@ -1,6 +1,7 @@
 import type { ISliderAdvProps } from "../types";
 import styles from "./achievements.module.css";
 import TestPage from "@/pages/edit-page";
+import { ArrowRightOutlined } from "@ant-design/icons";
 const Achievements: React.FC<ISliderAdvProps> = ({ items }) => {
   return (
     <section className={styles.sectionContainer}>
@@ -10,7 +11,7 @@ const Achievements: React.FC<ISliderAdvProps> = ({ items }) => {
         </h3>
         <TestPage />
         <button className={styles.button}>
-          <img src="arrow.png" alt="arrow"></img>
+         <ArrowRightOutlined style={{opacity:1}}/>
         </button>
       </div>
       <div className={styles.sectionContent}>

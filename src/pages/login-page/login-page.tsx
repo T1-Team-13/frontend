@@ -4,7 +4,7 @@ import LoginForm from "@/widgets/login-form";
 const LoginPage = () => {
   return (
     <main className={styles.formWrapper}>
-      <img src='T1Logo.png' alt='logo' />
+      <img src='icons/T1Logo.png' alt='logo' />
       <div className={styles.formContent}>
         <LoginForm/>
       </div>

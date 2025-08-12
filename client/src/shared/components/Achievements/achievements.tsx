@@ -1,6 +1,6 @@
 import type { ISliderAdvProps } from "../types";
 import styles from "./achievements.module.css";
-import TestPage from "@/pages/test-page";
+import TestPage from "@/pages/edit-page";
 const Achievements: React.FC<ISliderAdvProps> = ({ items }) => {
   return (
     <section className={styles.sectionContainer}>

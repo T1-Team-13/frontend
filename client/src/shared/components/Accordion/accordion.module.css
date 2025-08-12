@@ -1,5 +1,5 @@
 .accordion {
-  max-width: 50.8vw;
+  max-width: 45.8vw;
   margin: auto;
   background: white;
   border-radius: 20px;
@@ -20,10 +20,10 @@
   border-top: none;
 }
 .accordionHeader {
-  width: 45.8vw;
+  width: 41.8vw;
   margin: 0;
   text-align: left;
-  padding: 20px 20px 0px 20px;
+  padding: 15px 15px 0px 5px;
   font-size: 2.57vw;
   font-weight: 600;
   background: none;
@@ -88,14 +88,17 @@
   .accordionHeader {
     width: 84vw;
     font-size: 4.4vw;
+    padding: 10px 10px 0 10px;
   }
   .link {
     font-size: 3.1vw;
   }
   .accordionBody {
     position: absolute;
+    right: 0;
     left: 0vw;
-    top: 14vw;
+    width: 89vw;
+    top: 13.5vw;
     background-color: #fff;
   }
 }

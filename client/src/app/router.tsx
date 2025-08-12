@@ -5,7 +5,7 @@ import AppLayout from "@/widgets/app-layout";
 import ProfilePage from "@/pages/profile-page";
 import AchievementsPage from "@/pages/achievements-page";
 import ActivityPage from "@/pages/activity-page";
-import TestPage from "@/pages/test-page";
+import TestPage from "@/pages/edit-page";
 
 const Router = () => {
   return (

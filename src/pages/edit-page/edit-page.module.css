@@ -1,0 +1,49 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContainer {
+  position: relative;
+  background: white;
+  width: 900px;
+  overflow-y: auto;
+}
+
+.closePopupButton {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  width: 3vw;
+  height: 3vw;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #000;
+  z-index: 1001;
+}
+.settingsIcon {
+  cursor: pointer;
+  position: relative;
+  left: 7vw;
+  width: 3vw;
+  height: 3vw;
+}
+@media (max-width: 500px) {
+  .settingsIcon {
+    display: none;
+    position: relative;
+    left: 1vw;
+    width: 5vw;
+    height: 5vw;
+  }
+}

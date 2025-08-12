@@ -15,7 +15,6 @@ export default defineConfig({
       { find: '@shared', replacement: path.resolve(__dirname, 'src/shared') },
     ],
   },
-  base:'/frontend/',
   // server: {
   //   allowedHosts: ['localhost'],
   //   port: 5173,

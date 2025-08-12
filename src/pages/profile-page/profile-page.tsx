@@ -1,4 +1,5 @@
 import Colleagues from "@/shared/components/Colleagues";
+import OpacityImg from "@/shared/components/OpacityImg";
 
 const ProfilePage = () => {
   const users = [

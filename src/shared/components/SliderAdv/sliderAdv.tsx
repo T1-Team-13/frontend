@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import styles from "./sliderAdv.module.css";
 import type { ISliderAdvProps, ISliderItem } from "../types";
+import OpacityImg from "../OpacityImg";
 
 const SliderItem: React.FC<ISliderItem> = ({ item, isActive }) => {
   return (
     <div className={`${styles.itemContainer} ${isActive ? styles.active : ""}`}>
-      <img className={styles.itemImage} src={item.url} alt={item.title} />
+      <OpacityImg bgColor="white" isActive={false} steps={5} currentStep={3}>
+          <img className={styles.itemImage} src={item.url} alt={item.title} />
+      </OpacityImg>
       <div className={styles.itemTitle}>{item.title}</div>
     </div>
   );

@@ -42,7 +42,7 @@
   color:#000;
 }
 .settingsIcon:hover {
-  animation: rotateIcon 1s  cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: rotateIcon 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @keyframes rotateIcon {

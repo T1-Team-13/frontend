@@ -53,7 +53,6 @@ const AchivementsEdit = ({ userName }: AchivementsEditProps) => {
   return (
     <div className={styles.container}>
       <p className={styles.userName}>{userName}</p>
-      <img className={styles.closeButton} src="close.png" alt="Закрыть" />
       <hr />
       <select
         value={currentTask.title}

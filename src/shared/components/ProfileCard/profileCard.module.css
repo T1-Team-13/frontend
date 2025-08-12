@@ -4,8 +4,6 @@
   height: 53vw;
   background-color: white;
   border-radius: 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: 20px;
   display: flex;
   font-size: 1.57vw;
@@ -51,9 +49,8 @@
   opacity: 0.7;
   cursor: pointer;
 }
-.profileFidback img {
-  width: 2.22vw;
-  height: 1.86vw;
+.profileFidback svg {
+ font-size: 2vw;
 }
 @media (max-width: 500px) {
   .profileContainer {
@@ -84,9 +81,8 @@
     gap: 1vw;
     margin-top: 4vw;
   }
-  .profileFidback img {
-    width: 4vw;
-    height: 3.6vw;
+  .profileFidback svg {
+   font-size: 3vw;
   }
   .profileContent p {
     margin-bottom: 1.11vw;

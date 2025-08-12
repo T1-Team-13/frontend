@@ -28,6 +28,8 @@
 .collContent {
   display: flex;
   width: 24vw;
+  position: relative;
+  top: 10px;
   flex-direction: column;
   align-items: center;
   font-size: 1.57vw;
@@ -50,7 +52,7 @@
     width: 80vw;
     height: 17.5vw;
     padding: 0 3.4vw;
-    margin-bottom: 2vw;
+    margin-bottom: 0vw;
   }
   .link {
     font-size: 3.1vw;

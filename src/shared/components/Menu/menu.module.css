@@ -9,25 +9,23 @@
   position: relative;
   border-radius: 30px;
   text-decoration: none;
-  color: #292d31;
+  color: #16191b;
   font-size: 1.57vw;
   padding: 10px 18px;
   opacity: 0.75;
   transition: all 0.4s;
 }
 .buttonMenu:hover {
-  color: #292d31;
+  opacity: 1;
   background-color: #abb5c09e;
 }
 .active {
-  color: #292d31;
   opacity: 1;
   background-color: #abb5c09e;
 }
 .buttonMenu span {
   width: fit-content;
-  color: #292d31;
-  opacity: 0.75;
+  color: #16191b;
 }
 @media (max-width: 500px) {
   .menuContainer {

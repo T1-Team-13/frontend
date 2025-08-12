@@ -12,7 +12,6 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/" element={<LoginPage />} /> 
         {/*Сначала пользователь попадает на страницу логина, 
         выполняется проверка, если пользователь уже авторизован, то автоматически направляем его на "/user:id/achivements"*/}
         <Route element={<AppLayout />}>

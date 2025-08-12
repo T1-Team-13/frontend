@@ -32,12 +32,28 @@
   z-index: 1001;
 }
 .settingsIcon {
-  cursor: pointer;
   position: relative;
+  font-size: 3vw;
   left: 7vw;
   width: 3vw;
   height: 3vw;
 }
+.settingsIcon svg{
+  color:#000;
+}
+.settingsIcon:hover {
+  animation: rotateIcon 1s  cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
 @media (max-width: 500px) {
   .settingsIcon {
     display: none;

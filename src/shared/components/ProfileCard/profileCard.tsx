@@ -1,6 +1,6 @@
 import styles from "./profileCard.module.css";
 import type { IProfileProps } from "../types";
-
+import { UsergroupDeleteOutlined } from "@ant-design/icons";
 const ProfileCard: React.FC<IProfileProps> = ({
   fullname,
   photo,
@@ -16,7 +16,7 @@ const ProfileCard: React.FC<IProfileProps> = ({
         <p className={styles.profileDepart}>{department}</p>
 
         <div className={styles.profileFidback}>
-          <img src="team.png" alt="icon"></img>
+          <UsergroupDeleteOutlined />
           <p style={{ margin: 0 }}>Обратная связь</p>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import type { Itask } from "./task-model";
+import type { ITask } from "./task-model";
 
-export const mockTasks: Itask[] = [
+export const mockTasks: ITask[] = [
     {
         id: "7c9e6679-7425-40de-944b-12a3f8c7a4b5",
         title: "Разработать главную страницу сайта",

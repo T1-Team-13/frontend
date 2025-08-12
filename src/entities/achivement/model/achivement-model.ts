@@ -1,10 +1,13 @@
+import type { IAchivementCategory } from "./category-model";
+import type { IRequirement } from "./requirement-model";
+
 export interface IAchivement {
     id: string;
     title: string;
     description: string;
-    picture: string;
-    received: boolean;
-    type: string  | string[];
+    compleatedAt: Date;
+    categories: IAchivementCategory[];
+    requirements: IRequirement[];
+    imageUrl: string;
+    completed: boolean;
 }
-
-// Временно сделал вот такую структуру для пользователей и ачивок, в будущем, мы, конечно, изменим стркутуру для пользователей и ачивок. 

@@ -17,7 +17,10 @@ const LoginForm = () => {
             </Form.Item>
             <Form.Item
                 name="password"
-                rules={[{ required: true, message: "Пожалуйста, введите пароль" }]}
+                rules={[
+                    { required: true, message: "Пожалуйста, введите пароль" },
+                    { min: 8, message: "Пароль должен содержать минимум 8 символов" }
+                ]}
             >
                 <Input.Password placeholder="Пароль" />
             </Form.Item>

@@ -11,21 +11,13 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-
-        {/*Сначала пользователь попадает на страницу логина, 
-        выполняется проверка, если пользователь уже авторизован, то автоматически направляем его на "/user:id/achivements"*/}
         <Route element={<AppLayout />}>
-          {/* 
-          опираясь на наши планы, 
-          в нашем преокте пока вижу вот такие маршруты.
-          MainPage предлагаю сделать по аналогии с универсальной формой, 
-          как это у нас было в 3 и 4 домашках (пропсами передавать action либо achivements либо colleagues)
-          */}
           <Route path="/" element={<ProfilePage />} />
           <Route path="/activity" element={<ActivityPage />} />
           <Route path="/achievements" element={<AchievementsPage />} />
         </Route>
           <Route path="/test" element={<TestPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="*" element={<Error404Page />} />
       </Routes>
     </BrowserRouter>

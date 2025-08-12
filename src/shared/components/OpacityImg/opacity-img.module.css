@@ -1,0 +1,17 @@
+.imgContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imgContainer img{
+    position: absolute;
+}
+.sector{
+    z-index: 2;
+    background-color: aliceblue;
+    position: relative;
+}

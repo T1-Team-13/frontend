@@ -12,7 +12,7 @@ const TestPage = () => {
                 src='achEdit.png' 
                 alt='logo' 
                 onClick={() => setIsPopupOpen(true)}
-                style={{cursor: 'pointer'}}
+                className={styles.settingsIcon}
             />
             
             {isPopupOpen && (
@@ -23,7 +23,6 @@ const TestPage = () => {
                             className={styles.closePopupButton}
                             onClick={() => setIsPopupOpen(false)}
                         >
-                            ×
                         </button>
                     </div>
                 </div>

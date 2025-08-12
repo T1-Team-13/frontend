@@ -7,8 +7,8 @@ interface IUser {
   position: string;
   photo: string;
 }
-interface IUsers{
-  users:IUser[];
+interface IUsers {
+  users: IUser[];
 }
 const Colleagues: React.FC<IUsers> = ({ users }) => {
   const colleaguesList = users.map((user) => {
@@ -28,7 +28,9 @@ const Colleagues: React.FC<IUsers> = ({ users }) => {
   });
 
   return (
-    <Accordion header={<h3 style={{ fontWeight: 600 }}>Коллеги</h3>}>
+    <Accordion
+      header={<h3 className={styles.headerAcc}>Коллеги</h3>}
+    >
       {colleaguesList}
     </Accordion>
   );

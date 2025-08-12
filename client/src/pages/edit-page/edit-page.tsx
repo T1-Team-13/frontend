@@ -1,8 +1,8 @@
 import { useState } from "react";
 import AchivementsEdit from "@/widgets/achivements-edit";
-import styles from "./test-page.module.css";
+import styles from "./edit-page.module.css";
 
-const TestPage = () => {
+const EditPage = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const userName = 'Иванов Марк Андреевич';
     
@@ -31,6 +31,4 @@ const TestPage = () => {
     );
 };
 
-export default TestPage;
-
-// Сделал на отедльной странице, т.к. на странице профеля ещё не было шестерёнки, завтра замёржим и прикрутим этот компонент на своё место, а эту страницу удалим
+export default EditPage;

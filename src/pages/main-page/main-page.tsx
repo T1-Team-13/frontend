@@ -1,4 +1,3 @@
-import styles from "./main-page.module.css";
 
 const MainPage = () => {
   return (

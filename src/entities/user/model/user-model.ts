@@ -1,15 +1,15 @@
 import type { IAchivement } from "@/entities/achivement/model/achivement-model";
+import type { ITask } from "@/entities/tasks/model/task-model";
 
 export interface IUser {
     id: string;
-    name: string;
+    firstName: string;
+    lastName: string;
+    patronymic: string;
+    registrationDate: Date;
+    role: string;
+    imageUrl: string;
     email: string;
-    password: string;
-    jobTitle: string;
-    achivementsCount: number;
     achivements: IAchivement[];
-    avatar: string;
-    department: string;
+    tasks: ITask[];
 }
-
-// Временно сделал вот такую структуру для пользователей и ачивок, в будущем, мы, конечно, изменим стркутуру для пользователей и ачивок. 

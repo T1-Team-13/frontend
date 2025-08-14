@@ -14,6 +14,12 @@ export default defineConfig({
       { find: '@entities', replacement: path.resolve(__dirname, 'src/entities') },
       { find: '@shared', replacement: path.resolve(__dirname, 'src/shared') },
     ],
+    server: {
+      host: '0.0.0.0',
+      port: 5173,
+      allowedHosts: ['dev-team13.ru'],
+      strictPort: true
+    },
   },
   // server: {
   //   allowedHosts: ['localhost'],
